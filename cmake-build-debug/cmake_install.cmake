@@ -1,8 +1,8 @@
-# Install script for directory: /Users/ludwigroger/CLionProjects/test
+# Install script for directory: D:/Documents/GitHub/Machine-Learning-Lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr/local")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/test")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/ludwigroger/CLionProjects/test/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Documents/GitHub/Machine-Learning-Lib/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
