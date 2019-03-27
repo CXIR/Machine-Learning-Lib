@@ -33,6 +33,9 @@ extern "C"
         return Sign(result);
     }
 
+    #ifdef __WIN32
+    __declspec(dllexport)
+    #endif
     void Train (double *w, int inputs[], int valuesUsedByModel, int modelsTested, int valuesExpected[], int learningStep, int iteration)
     {
         for (int i = 0; i < iteration; i++)
