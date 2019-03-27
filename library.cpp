@@ -3,23 +3,26 @@
 
 extern "C"
 {
-    static double * w;
+    int Return42()
+    {
+        return 42;
+    }
 
     double* Initialize(int valuesUsedByModel)
     {
-        w = new double[valuesUsedByModel];
+        double* w = new double[valuesUsedByModel];
         for (int i = 0; i < valuesUsedByModel; i++) {
             w[i] = -1 + (rand() % (3));
         }
         return w;
     }
 
-    double Sign (double result)
+    int Sign(double result)
     {
         return (result > 0) ? 1 : -1;
     }
 
-    double Predict(double *w, double* inputk, int valuesUsedByModel)
+    int Predict(double* w, double* inputk, int valuesUsedByModel)
     {
         double result = w[0];
 
@@ -31,7 +34,7 @@ extern "C"
         return Sign(result);
     }
 
-    void Train(double* w, double inputs[], int valuesUsedByModel, int modelsTested, double valuesExpected[], double learningStep, int iteration)
+    void Train(double* w, double* inputs, int valuesUsedByModel, int modelsTested, double* output, double learningStep, int iteration)
     {
         for (int i = 0; i < iteration; i++)
         {
@@ -39,20 +42,15 @@ extern "C"
             {
                 double* inputk = inputs + k * valuesUsedByModel;
 
-                double gxk = Predict(w, inputk, valuesUsedByModel);
+                int gxk = Predict(w, inputk, valuesUsedByModel);
 
-                w[0] = w[0] + learningStep * (valuesExpected[k] - gxk) * 1;
+                w[0] = w[0] + learningStep * (output[k] - gxk) * 1;
 
                 for (int j = 0; j < valuesUsedByModel; j++)
                 {
-                    w[j + 1] = w[j + 1] + learningStep * (valuesExpected[k] - gxk) * inputs[j];
+                    w[j + 1] = w[j + 1] + learningStep * (output[k] - gxk) * inputk[j];
                 }
             }
         }
-    }
-
-    double* GetW()
-    {
-        return w;
     }
 }
