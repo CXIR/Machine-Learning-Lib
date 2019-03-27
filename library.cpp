@@ -5,6 +5,9 @@ extern "C"
 {
     static double * w;
 
+    #ifdef __WIN32
+    __declspec(dllexport)
+    #endif
     double * Initialize (int valuesUsedByModel)
     {
         w = new double[valuesUsedByModel];
