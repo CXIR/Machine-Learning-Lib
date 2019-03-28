@@ -151,6 +151,18 @@ extern "C" {
 
 		return output;
 	}
+	
+	__declspec(dllexport) double PredictLinear(double* w, double* inputk, int valuesUsedByModel)
+	{
+		double result = w[0];
+
+		for (int i = 0; i < valuesUsedByModel; i++)
+		{
+			result += w[i + 1] * inputk[i];
+		}
+
+		return result;
+	}
 }
 
 
