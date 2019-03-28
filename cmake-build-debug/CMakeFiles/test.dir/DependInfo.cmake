@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Documents/GitHub/Machine-Learning-Lib/library.cpp" "D:/Documents/GitHub/Machine-Learning-Lib/cmake-build-debug/CMakeFiles/test.dir/library.cpp.obj"
+  "/Users/ludwigroger/CLionProjects/Machine-Learning-Lib/library.cpp" "/Users/ludwigroger/CLionProjects/Machine-Learning-Lib/cmake-build-debug/CMakeFiles/test.dir/library.cpp.o"
+  "/Users/ludwigroger/CLionProjects/Machine-Learning-Lib/linearRegression.cpp" "/Users/ludwigroger/CLionProjects/Machine-Learning-Lib/cmake-build-debug/CMakeFiles/test.dir/linearRegression.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

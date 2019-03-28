@@ -120,7 +120,7 @@ extern "C" {
 
 
 	//__declspec(dllexport)
-	double* linearRegression(double *Xvalues, double *Yvalues, int numberOfParam, int numberOfObject)
+	double* LinearRegression(double *Xvalues, double *Yvalues, int numberOfParam, int numberOfObject)
 	{
 		// INIT MATRIX X
 		double **Xmatrix = arrayToMatrix(Xvalues, numberOfObject, numberOfParam);
@@ -152,7 +152,8 @@ extern "C" {
 		return output;
 	}
 	
-	__declspec(dllexport) double PredictLinear(double* w, double* inputk, int valuesUsedByModel)
+	//__declspec(dllexport)
+	double PredictLinear(double* w, double* inputk, int valuesUsedByModel)
 	{
 		double result = w[0];
 

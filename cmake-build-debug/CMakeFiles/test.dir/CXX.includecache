@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ludwigroger/CLionProjects/Machine-Learning-Lib/linearRegression.cpp
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+

@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test.dir/library.cpp.obj"
+  "CMakeFiles/test.dir/library.cpp.o"
+  "CMakeFiles/test.dir/linearRegression.cpp.o"
   "libtest.pdb"
-  "libtest.dll"
-  "libtest.dll.a"
-  "libtest.dll.manifest"
+  "libtest.dylib"
 )
 
 # Per-language clean rules from dependency scanning.
